@@ -16,18 +16,29 @@ class App extends Component {
              * It makes the store available for the rest of the app
              */
 
-            <div className="App">
+            <div className="container">
                 
-                <header className="App-header">
+                <br/>
                 
-                <img src={logo} className="App-logo" alt="logo" />
-                
-                </header>
+                <div className="row">
+                    
+                    <div className="col-12">
+                         
+                        <h1>
+                            <img src={logo} className="App-logo align-middle" alt="logo" />
+                            React.js-Redux
+                        </h1>
 
+                    </div>
+
+                </div>
+                
+                <br/>
+                
                 <PostForm />
                 
-                <hr />
-                
+                <hr/>
+
                 <Posts />
                 
             </div>

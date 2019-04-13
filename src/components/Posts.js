@@ -45,21 +45,33 @@ class Posts extends Component {
     render() {
 
         const postItems = this.props.posts.map(post => (
+            
+            <div>
 
-            <div key={post.id}>
+                <div class="card" key={post.id}>
+                    
+                    <div class="card-body">
+
+                        <div className="row">
+                            
+                            <div className="col-11">
+                                <h5 class="card-title"> {post.title} </h5>
+                            </div>
+
+                            <div className="col-1">
+                                <button id={post.id} onClick={this.deletePost} className="btn btn-sm btn-danger float-right">x</button>
+                            </div>
+                            
+                        </div>
+
+                        <p class="card-text"> {post.body} </p>
+                        
+                    </div>
+
+                </div>
+
+                <br/>
                 
-                <h4>
-                    {post.title}    
-                </h4>
-
-                <p>
-                    {post.body}
-                </p>
-                
-                <button id={post.id} onClick={this.deletePost}>
-                    x
-                </button>
-
             </div>
 
         ));
