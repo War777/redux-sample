@@ -49,15 +49,21 @@ class PostForm extends Component {
         return (
 
             <div>
-                <h1>
+                <h5>
                     Add post
-                </h1>
+                </h5>
+                
+                <p>
+                    Este es un test para revisar la funcionalidad de como funciona el branching con Github.
+                </p>
 
                 <form onSubmit={this.onSubmit}>
                     
-                    <input type="text" name="title" value={this.state.title} onChange={this.onChange} /> <br/><br/>
-                    <textarea name="body" value={this.state.body}  onChange={this.onChange} /><br/>
-                    <button type="submit">Add</button>
+                    <input type="text" name="title" value={this.state.title} onChange={this.onChange} className="form-control" placeholder="Title" /> <br/>
+                    
+                    <textarea name="body" value={this.state.body}  onChange={this.onChange} className="form-control" placeholder="Post" /><br/>
+                    
+                    <button type="submit" className="btn btn-outline-primary "> Add </button>
 
                 </form>
                 
