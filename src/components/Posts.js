@@ -46,16 +46,16 @@ class Posts extends Component {
 
         const postItems = this.props.posts.map(post => (
             
-            <div>
+            <div key={post.id}>
 
-                <div class="card" key={post.id}>
+                <div className="card">
                     
-                    <div class="card-body">
+                    <div className="card-body">
 
                         <div className="row">
                             
                             <div className="col-11">
-                                <h5 class="card-title"> {post.title} </h5>
+                                <h5 className="card-title"> {post.title} </h5>
                             </div>
 
                             <div className="col-1">
@@ -64,7 +64,7 @@ class Posts extends Component {
                             
                         </div>
 
-                        <p class="card-text"> {post.body} </p>
+                        <p className="card-text"> {post.body} </p>
                         
                     </div>
 
